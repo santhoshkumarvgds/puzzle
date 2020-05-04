@@ -124,3 +124,7 @@ lable{
 #file{
     color:white;
 }
+.right td{
+    width: 100px;
+    height: 100px;
+}
