@@ -6,15 +6,14 @@ var pos = ["0px 0px", "-100px 0px", "-200px 0px", "0px -100px", "-100px -100px",
 window.onload = function () {
     //checck device 
     var name = "NILL";
-    var clickedid;
     if (localStorage.length > 0) {
         if (localStorage.checkvalue != undefined) {
             name = JSON.parse(localStorage.getItem("nameoftheperson"));
             name += "   " + JSON.parse(localStorage.getItem("score"));
-            if(localStorage.img){
-                imgsrc=JSON.parse(localStorage.getItem("img"));
+            if (localStorage.img) {
+                imgsrc = JSON.parse(localStorage.getItem("img"));
             }
-            
+
         }
     }
     document.getElementById("name").innerHTML = name;
@@ -146,7 +145,3 @@ $("#file").change(function () {
     }
     reader.readAsDataURL(this.files[0]);
 });
-
-function idval(clickid) {
-    clickedid = clickid;
-}
